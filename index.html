@@ -2,7 +2,7 @@
 <html lang="en-IE">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cook with Orla · Thermomix Advisor West Cork</title>
 <meta name="description" content="Your local Thermomix® advisor in West Cork. Friendly advice, pricing and relaxed cooking demos close to home. Message Orla on WhatsApp.">
 <meta property="og:title" content="Let's Get Cooking, West Cork">
@@ -136,7 +136,14 @@
   .sticky-wa.show { transform: none; }
   .sticky-wa .btn-wa { width: 100%; }
 
+  /* iPhone: Abstand zum Home-Balken, und die Fusszeile nicht unter dem Sticky-Button verstecken */
+  .sticky-wa { bottom: calc(16px + env(safe-area-inset-bottom)); }
+  footer { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+  @media (max-width: 380px) {
+    .btn-wa { font-size: 17px; padding: 16px 20px; gap: 10px; }
+  }
   @media (min-width: 820px) {
+    footer { padding-bottom: 40px; }
     .hero { padding: 36px 0 88px; }
     .hero-grid { grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: 56px; margin-top: 56px; }
     .about { grid-template-columns: 220px minmax(0,1fr); gap: 48px; }
