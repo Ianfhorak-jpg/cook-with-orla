@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cook with Orla · Thermomix Advisor West Cork</title>
+<meta name="description" content="Your local Thermomix® advisor in West Cork. Friendly advice, pricing and relaxed cooking demos close to home. Message Orla on WhatsApp.">
+<meta property="og:title" content="Let's Get Cooking, West Cork">
+<meta property="og:description" content="Your local Thermomix® advisor. Message Orla on WhatsApp for advice, pricing or a cooking demo.">
+<meta property="og:image" content="img/thermomix.jpg">
+<meta name="theme-color" content="#f6d3d0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23c8435f'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Georgia'>O</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blush: #f6d3d0;
+    --blush-soft: #fbeceb;
+    --rose: #c8435f;
+    --rose-deep: #9e2f48;
+    --ink: #2b1f22;
+    --muted: #6d5a5e;
+    --paper: #fffaf8;
+    --wa: #1faa55;
+    --wa-deep: #168a44;
+    --radius: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: "DM Sans", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+    font-size: 17px;
+  }
+  h1, h2 { font-family: "Fraunces", Georgia, serif; line-height: 1.1; margin: 0; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background:
+      radial-gradient(120% 70% at 100% 0%, #f2b9b6 0%, transparent 60%),
+      radial-gradient(90% 60% at 0% 100%, #fde4e1 0%, transparent 70%),
+      var(--blush);
+    padding: 28px 0 56px;
+    overflow: hidden;
+  }
+  .brand {
+    font-family: "Fraunces", serif; font-weight: 700; font-size: 18px;
+    color: var(--rose-deep); letter-spacing: .01em;
+  }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; align-items: center; margin-top: 32px; }
+  .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--rose-deep);
+    background: rgba(255,255,255,.6); padding: 6px 12px; border-radius: 999px;
+  }
+  .hero h1 { font-size: clamp(40px, 9vw, 68px); margin: 16px 0 16px; color: var(--ink); }
+  .hero h1 em { font-style: normal; color: var(--rose); }
+  .lead { font-size: 19px; color: var(--muted); max-width: 30em; margin: 0 0 28px; }
+
+  .btn-wa {
+    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+    background: var(--wa); color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 19px;
+    padding: 18px 28px; border-radius: 999px;
+    box-shadow: 0 10px 24px -8px rgba(22,138,68,.55);
+    transition: transform .15s ease, background .15s ease;
+    min-height: 60px;
+  }
+  .btn-wa:hover { background: var(--wa-deep); transform: translateY(-2px); }
+  .btn-wa:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .btn-wa svg { width: 26px; height: 26px; flex: none; }
+  .phone-line { margin: 14px 0 0; font-size: 15px; color: var(--muted); }
+  .phone-line span { color: var(--ink); font-weight: 700; }
+
+  .hero-photo {
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(90,30,45,.45);
+    background: #fff;
+  }
+  .hero-photo img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 64px 0; }
+  .section-title { font-size: clamp(30px, 6vw, 42px); margin-bottom: 18px; }
+
+  .about { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: center; }
+  .avatar {
+    width: 180px; height: 180px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blush), #eea8ae);
+    display: grid; place-items: center;
+    font-family: "Fraunces", serif; font-size: 72px; color: #fff;
+    border: 6px solid #fff; box-shadow: 0 16px 40px -18px rgba(90,30,45,.45);
+    overflow: hidden;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .about p { margin: 0 0 14px; color: var(--muted); }
+  .about p strong { color: var(--ink); }
+
+  .perks { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; }
+  .perks li { display: flex; gap: 12px; align-items: flex-start; }
+  .perks li::before {
+    content: ""; flex: none; width: 22px; height: 22px; margin-top: 2px; border-radius: 50%;
+    background: var(--rose) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l5 5 9-10'/></svg>") center/14px no-repeat;
+  }
+
+  .area { background: var(--blush-soft); }
+  .area p { color: var(--muted); margin: 0 0 22px; max-width: 34em; }
+  .towns { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .towns li {
+    background: #fff; border: 1px solid #f0c9c6; color: var(--ink);
+    padding: 9px 16px; border-radius: 999px; font-weight: 500; font-size: 16px;
+  }
+
+  .cta { text-align: center; }
+  .cta-card {
+    background: var(--rose); color: #fff; border-radius: 28px;
+    padding: 48px 24px;
+  }
+  .cta-card h2 { font-size: clamp(30px, 6vw, 44px); margin-bottom: 12px; }
+  .cta-card p { margin: 0 auto 28px; max-width: 28em; opacity: .92; }
+  .cta-card .phone-line, .cta-card .phone-line span { color: #fff; }
+
+  footer { padding: 28px 0 40px; font-size: 13px; color: var(--muted); text-align: center; }
+
+  /* Sticky WhatsApp button on phones, appears once the hero button is out of view */
+  .sticky-wa {
+    position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 10;
+    transform: translateY(140%); transition: transform .25s ease;
+  }
+  .sticky-wa.show { transform: none; }
+  .sticky-wa .btn-wa { width: 100%; }
+
+  @media (min-width: 820px) {
+    .hero { padding: 36px 0 88px; }
+    .hero-grid { grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: 56px; margin-top: 56px; }
+    .about { grid-template-columns: 220px minmax(0,1fr); gap: 48px; }
+    .avatar { width: 220px; height: 220px; }
+    section { padding: 88px 0; }
+    .sticky-wa { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Cook with Orla</div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Thermomix® Advisor · West Cork</span>
+        <h1>Let's get cooking, <em>West Cork.</em></h1>
+        <p class="lead">No more travelling to Cork city for a demo. Get friendly advice, explore the Thermomix® and book a relaxed cooking demo close to home.</p>
+        <a class="btn-wa js-wa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.86 9.86 0 0 0 12.04 2Zm5.79 14.02c-.24.68-1.42 1.33-1.96 1.38-.5.05-.97.23-3.28-.68-2.78-1.1-4.54-3.95-4.68-4.13-.13-.18-1.12-1.49-1.12-2.84 0-1.35.71-2.02.96-2.29.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></svg>
+          Chat with me on WhatsApp
+        </a>
+        <p class="phone-line">WhatsApp messages only, please · <span class="js-num"></span></p>
+      </div>
+      <div class="hero-photo">
+        <!-- Platzhalter: Produktfoto. Spaeter durch ein Foto von Orla mit dem Thermomix ersetzen. -->
+        <img src="img/thermomix.jpg" alt="Thermomix TM7 on a kitchen table" width="500" height="281">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap about">
+      <div class="avatar">
+        <!-- Platzhalter: sobald das Foto da ist -> <img src="img/orla.jpg" alt="Orla McManaman"> -->
+        O
+      </div>
+      <div>
+        <h2 class="section-title">Hi, I'm Orla.</h2>
+        <!-- ENTWURF: Orla soll diesen Text pruefen und persoenlicher machen. -->
+        <p>I'm your local <strong>Thermomix® advisor here in West Cork</strong>. I love good home cooking, and I love it even more when it takes half the time and half the washing up.</p>
+        <p>Whether you just have a quick question or want to see what it can really do, I'm happy to help. No pressure and no hard sell, just a chat and some good food.</p>
+        <ul class="perks">
+          <li>Relaxed cooking demos in your own kitchen</li>
+          <li>Honest answers on pricing and current offers</li>
+          <li>Help getting started once your Thermomix® arrives</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="area">
+    <div class="wrap">
+      <h2 class="section-title">Where I cook</h2>
+      <p>I cover all of West Cork. If your town isn't listed, just send me a message. Chances are I can come to you.</p>
+      <!-- ENTWURF: Orte mit Orla abstimmen. -->
+      <ul class="towns">
+        <li>Clonakilty</li><li>Skibbereen</li><li>Bantry</li><li>Bandon</li>
+        <li>Kinsale</li><li>Dunmanway</li><li>Rosscarbery</li><li>Schull</li>
+        <li>Macroom</li><li>Castletownbere</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta-card">
+        <h2>Fancy a chat?</h2>
+        <p>Ask a quick question, explore pricing, or book a casual, fun cooking demo. I usually reply the same day.</p>
+        <a class="btn-wa js-wa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.86 9.86 0 0 0 12.04 2Zm5.79 14.02c-.24.68-1.42 1.33-1.96 1.38-.5.05-.97.23-3.28-.68-2.78-1.1-4.54-3.95-4.68-4.13-.13-.18-1.12-1.49-1.12-2.84 0-1.35.71-2.02.96-2.29.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></svg>
+          Message Orla on WhatsApp
+        </a>
+        <p class="phone-line">WhatsApp messages only, please · <span class="js-num"></span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Orla McManaman · Independent Thermomix® Advisor · West Cork, Ireland<br>
+    Thermomix® is a registered trademark of Vorwerk.
+  </div>
+</footer>
+
+<div class="sticky-wa" aria-hidden="true">
+  <a class="btn-wa js-wa" href="#" target="_blank" rel="noopener" tabindex="-1">Chat on WhatsApp</a>
+</div>
+
+<script>
+  // Alle Kontaktdaten an einer Stelle: hier aendern, dann stimmt die ganze Seite.
+  const CONTACT = {
+    whatsapp: "353892042013",          // internationales Format, ohne + und ohne fuehrende 0
+    phoneDisplay: "089 204 2013",       // nur Anzeige, kein Anruf-Link: Orla will nur WhatsApp-Nachrichten
+    greeting: "Hi Orla! I found your page and I'd love to know more about the Thermomix."
+  };
+
+  const waUrl = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(CONTACT.greeting)}`;
+  document.querySelectorAll(".js-wa").forEach(a => a.href = waUrl);
+  document.querySelectorAll(".js-num").forEach(el => el.textContent = CONTACT.phoneDisplay);
+
+  // Sticky-Button erst zeigen, wenn der Hero-Button aus dem Bild gescrollt ist
+  const sticky = document.querySelector(".sticky-wa");
+  const heroBtn = document.querySelector(".hero .btn-wa");
+  new IntersectionObserver(([e]) => sticky.classList.toggle("show", !e.isIntersecting))
+    .observe(heroBtn);
+</script>
+</body>
+</html>
